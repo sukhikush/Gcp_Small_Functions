@@ -1,0 +1,62 @@
+doctype html
+html
+  head
+    title API Build Reports
+    script.
+      var fnCalled = false;
+      async function loadReport(){
+        if(fnCalled){
+          alert("Previous Request still in Progress");
+          return;
+        }
+        try{
+          //Some General Settings;
+          fnCalled = true;
+          document.getElementById("getReport").style.display = 'none';
+          document.getElementById("getReportLoader").style.display = 'inline-block';
+
+          await fetch("https://us-central1-da-tf-project-1-1b0f.cloudfunctions.net/cloud-build-test-reports", {"method": "GET"})
+          .then((response) => {
+            location.reload();
+          })
+          .catch((error) => {fnCalled=false;console.error(error);});
+        } catch (error) {
+          console.error('Error loading report:', error);
+        }
+      }
+    style.
+      body{
+        font-family: system-ui;
+      }
+      h1{display: inline-block;    margin-right: 10px;}
+      #getReport{color:darkred;font-weight:bold;cursor: pointer;font-size: 14px;}
+      .loader {
+        display: none;
+        width: 15px;
+        aspect-ratio: 1;
+        --_g: no-repeat radial-gradient(circle closest-side,#0023a1 90%,#0000);
+        background: 
+          var(--_g) 0    0,
+          var(--_g) 0    100%,
+          var(--_g) 100% 100%;
+        background-size: 40% 40%;
+        animation:l11 1s infinite linear;
+      }
+      @keyframes l11 {
+          25% {background-position:100% 0   ,0 100%,100% 100%}
+          50% {background-position:100% 0   ,0 0   ,100% 100%}
+          75% {background-position:100% 0   ,0 0   ,0    100%}
+          100%{background-position:100% 100%,0 0   ,0    100%}
+      }
+  body
+    h1 API Build Reports
+    sapn(onclick="loadReport()",id="getReport") (Fetch New Reports)
+    span(class="loader",id='getReportLoader')
+    if items.length > 0
+      ul
+        each item in items
+          - var formattedItem = item.replace('/', '')
+          li
+            a(href=`${formattedItem}/reports/unit-test.txt`)= formattedItem
+    else
+      p There are no API build reports to display.
