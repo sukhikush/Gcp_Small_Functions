@@ -1,0 +1,56 @@
+{
+    "Account_Mandatory_Missing_Name":{
+      "errorKey":"Account name Can Not Be Empty"
+    },
+    "Account_Mandatory_Missing_website":{
+      "errorKey":"Account website Can Not Be Empty"
+    },
+    "Account_Mandatory_Missing_type":{
+      "errorKey":"Account type Can Not Be Empty"
+    },
+    "Account_Mandatory_Missing_industry":{
+      "errorKey":"Account industry Can Not Be Empty"
+    },
+    "Generic_Domain":{
+      "errorKey":"Domain is generic domain"
+    },
+    "Missing_Revenue":{
+      "errorKey":"Revenue Can Not Be 0 (Zero) or Empty"
+    },
+    "Missing_Employee_Size":{
+      "errorKey":"Employee Size Can Not Be 0 (Zero) or Empty"
+    },
+    "Missing_Industry":{
+      "errorKey":"Could not add SubIndustry without Industry"
+    },
+    "Incorrect_Sub_Industry":{
+      "errorKey":"Bad Sub Industry"
+    },
+    "Incorrect_Industry":{
+      "errorKey":"Bad Industry"
+    },
+    "Missing_Zoom_Industry":{
+      "errorKey":"Could not add Zoom Sub-Industry without Zoom Industry"
+    },
+    "Duplicate_Location_Found":{
+      "errorKey":"Duplicate Location Found"
+    },
+    "Location_Already_Exist":{
+      "errorKey":"Location Already Exist"
+    },
+    "Duplicate_Account":{
+      "errorKey":"Duplicate Account"
+    },
+    "Duplicate_Pair_of_Account_Location_Found":{
+      "errorKey":"Duplicate Pair of Account & Location Found"
+    },
+    "Location":{
+      "errorKey":"Location "
+    },
+    "Account_Phone_Number":{
+      "errorKey":"Account Phone Number"
+    },
+    "OtherError":{
+      "errorKey":"All Other Errors"
+    }
+}

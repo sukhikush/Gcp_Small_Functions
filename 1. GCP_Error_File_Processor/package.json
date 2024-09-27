@@ -1,0 +1,17 @@
+{
+  "name": "stream-with-query-stremer-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "reRun":"rm -rf ./processedFile/* .logs && echo {} > ./processedFile/TotalCtnData.json && echo Industry > ./processedFile/TotalFunctionError.csv && node index2.js > .logs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^6.7.0",
+    "fast-csv": "^4.3.6",
+    "serialize-error": "^8.1.0"
+  }
+}
